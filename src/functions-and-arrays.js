@@ -70,7 +70,7 @@ function sum(almostarray) {
       almostsum+=element;
     }
     else {
-      throw "Error: Unsupported data type sir or ma'am";
+      throw Error("Unsupported data type sir or ma'am"); 
     }
 });
 return almostsum;
@@ -228,6 +228,30 @@ if (array4.filter((v) => (v === searchword2)).length === 1) {
 }
 console.log (howManyTimes(wordsCount,"matter"));
 // Iteration #8: Bonus
+
+const matrix1= [1,1,1,1,1]
+
+function greatestProduct (matrix1) {
+  let sumTotal=0;
+  let matrixLength=0;
+  for(let i=0;i<matrix1.length;i++) {
+    for (let p=0;p<matrix1[i].length;p++) {
+        if (matrix1[i][p]===1) {
+            sumTotal+=1}
+        else if (matrix1[i][p]===2) {
+          sumTotal+=2
+        }
+    }
+    matrixLength+= matrix1[i].length;
+  }
+  if (sumTotal===matrixLength) {
+      return 1;
+  }
+  else if (sumTotal===matrixLength*2) {
+    return 16;
+  }
+  console.log (sumTotal, matrixLength);
+}
 
 const matrix = [
   [8, 2, 22, 97, 38, 15, 0, 40, 0, 75, 4, 5, 7, 78, 52, 12, 50, 77, 91, 8],
